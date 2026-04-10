@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RetroPulse</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <h1>RetroPulse</h1>
+          <p class="subtitle">Neon reactive audio visualizer</p>
+        </div>
+        <p id="trackLabel" class="track">No track loaded</p>
+      </header>
+
+      <section class="controls" aria-label="Audio controls">
+        <label class="file-input">
+          <span>Load Audio</span>
+          <input id="fileInput" type="file" accept="audio/*" />
+        </label>
+
+        <button id="playPauseBtn" type="button" disabled>Play</button>
+
+        <label>
+          <span>Mode</span>
+          <select id="modeSelect">
+            <option value="bars">Bars</option>
+            <option value="waveform">Waveform</option>
+            <option value="radial">Radial</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Intensity</span>
+          <input id="intensityInput" type="range" min="0.5" max="2.5" step="0.1" value="1" />
+        </label>
+      </section>
+
+      <section class="visualizer-shell">
+        <canvas id="visualizerCanvas" aria-label="Music visualizer"></canvas>
+      </section>
+
+      <audio id="audioElement" preload="metadata"></audio>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
