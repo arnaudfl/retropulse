@@ -2,51 +2,19 @@
 
 RetroPulse is a browser-based music visualizer inspired by classic Winamp-era visual effects.
 
-## Project goal
+## V1 features
 
-Build a lightweight web audio visualizer that reacts to music in real time and offers multiple retro-styled rendering modes such as bars, waveform, vectors, and radial effects.
+- Load local audio files directly in the browser
+- Play and pause controls
+- Real-time Web Audio API analysis
+- Three visualizer modes:
+  - Bars
+  - Waveform
+  - Radial
+- Adjustable intensity control
+- Lightweight neon/dark retro UI
 
-The project should feel visually satisfying, simple to use, and easy to evolve.
-
-## Main idea
-
-The user loads a local audio file in the browser.
-
-The application analyzes the audio signal in real time and renders reactive visuals in a canvas.
-
-The visualizer should support multiple display modes and a clean retro-futuristic interface.
-
-## Core principles
-
-- No external image assets
-- No sprite sheets
-- No heavy framework unless absolutely justified
-- Keep the project lightweight and browser-native
-- Favor a polished V1 over too many unfinished features
-
-## Target V1
-
-The first version should include:
-
-- local audio file loading
-- audio playback controls
-- real-time visualization
-- at least 3 visualizer modes
-- a clean fullscreen-friendly interface
-- a retro / neon / dark visual style
-
-## Suggested visualizer modes
-
-- Bars
-- Waveform
-- Radial
-- Vector lines
-- Dot field
-- Tunnel or pulse mode
-
-Only 3 modes are required for V1. More can be added later.
-
-## Recommended tech direction
+## Tech stack
 
 - HTML
 - CSS
@@ -54,42 +22,32 @@ Only 3 modes are required for V1. More can be added later.
 - Canvas 2D
 - Web Audio API
 
-## Non-goals for V1
+No framework, backend, or build tooling is required.
 
-Do not build:
+## Run locally
 
-- a full music player library manager
-- user accounts
-- playlists
-- backend services
-- database storage
-- audio streaming integrations
-- WebGL complexity unless the simple Canvas version becomes limiting
+Because this app uses ES modules, run it from a local web server.
 
-## Success criteria
+### Option 1: Python
 
-The project is successful if:
+```bash
+python3 -m http.server 8000
+```
 
-- a user can open the app in a browser
-- load a local audio file
-- play the audio
-- switch between visualizer modes
-- see smooth, reactive visuals without major UI issues
+Then open <http://localhost:8000> in your browser.
 
-## Future ideas
+### Option 2: Any static server
 
-Possible later improvements:
+Use any static file server and point it to the repository root.
 
-- microphone input
-- drag and drop audio loading
-- additional shader-like effects
-- color themes
-- sensitivity controls
-- fullscreen mode
-- recording or export
+## Usage
 
-## Repository purpose
+1. Click **Load Audio** and choose a local audio file.
+2. Click **Play**.
+3. Switch between **Bars**, **Waveform**, and **Radial** modes.
+4. Adjust **Intensity** to tune visual responsiveness.
 
-This repository is intentionally initialized as a clear starting point for Codex.
+## Notes
 
-The initial priority is to create a clean and functional V1, not to overengineer the architecture.
+- Audio files are processed locally in the browser.
+- No data is uploaded anywhere.
