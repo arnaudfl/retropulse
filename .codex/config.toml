@@ -1,0 +1,4 @@
+model = "gpt-5.4"
+
+[projects."/workspace"]
+trust_level = "trusted"
