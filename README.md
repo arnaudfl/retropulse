@@ -2,46 +2,94 @@
 
 RetroPulse is a browser-based music visualizer inspired by classic Winamp-era visual effects.
 
-## Goal
+## Project goal
 
-Build a clean, lightweight audio visualizer with multiple rendering modes, no external assets, and a retro-futuristic UI.
+Build a lightweight web audio visualizer that reacts to music in real time and offers multiple retro-styled rendering modes such as bars, waveform, vectors, and radial effects.
 
-## Planned features
+The project should feel visually satisfying, simple to use, and easy to evolve.
 
-- Local audio file upload
-- Play / pause controls
-- Canvas 2D rendering
-- Multiple visualization modes:
-  - Bars
-  - Wave
-  - Radial
-- Responsive layout
-- Minimal neon-style interface
+## Main idea
 
-## Tech
+The user loads a local audio file in the browser.
+
+The application analyzes the audio signal in real time and renders reactive visuals in a canvas.
+
+The visualizer should support multiple display modes and a clean retro-futuristic interface.
+
+## Core principles
+
+- No external image assets
+- No sprite sheets
+- No heavy framework unless absolutely justified
+- Keep the project lightweight and browser-native
+- Favor a polished V1 over too many unfinished features
+
+## Target V1
+
+The first version should include:
+
+- local audio file loading
+- audio playback controls
+- real-time visualization
+- at least 3 visualizer modes
+- a clean fullscreen-friendly interface
+- a retro / neon / dark visual style
+
+## Suggested visualizer modes
+
+- Bars
+- Waveform
+- Radial
+- Vector lines
+- Dot field
+- Tunnel or pulse mode
+
+Only 3 modes are required for V1. More can be added later.
+
+## Recommended tech direction
 
 - HTML
 - CSS
 - Vanilla JavaScript
-- Web Audio API
 - Canvas 2D
+- Web Audio API
 
-## Project rules
+## Non-goals for V1
 
-- No external framework unless clearly justified
-- No sprite or image assets
-- Keep code modular and readable
-- Prioritize a working V1 before adding effects
+Do not build:
 
-## Development
+- a full music player library manager
+- user accounts
+- playlists
+- backend services
+- database storage
+- audio streaming integrations
+- WebGL complexity unless the simple Canvas version becomes limiting
 
-Open `index.html` in a browser for a very early prototype, or use a local static server.
+## Success criteria
 
-## V1 definition
+The project is successful if:
 
-A V1 is complete when:
-- a local audio file can be loaded
-- audio playback works
-- analyser data drives the canvas
-- 3 visualization modes are selectable
-- the UI remains simple and stable
+- a user can open the app in a browser
+- load a local audio file
+- play the audio
+- switch between visualizer modes
+- see smooth, reactive visuals without major UI issues
+
+## Future ideas
+
+Possible later improvements:
+
+- microphone input
+- drag and drop audio loading
+- additional shader-like effects
+- color themes
+- sensitivity controls
+- fullscreen mode
+- recording or export
+
+## Repository purpose
+
+This repository is intentionally initialized as a clear starting point for Codex.
+
+The initial priority is to create a clean and functional V1, not to overengineer the architecture.
